@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/devakinandan/Desktop/ultimate-react-course-1/16-fast-react-pizza/final-2-final",
+      "program": "/Users/devakinandan/Desktop/ultimate-react-course-1/16-fast-react-pizza/final-2-final/build/Debug/outDebug"
+    }
+  ]
+}
