@@ -14,7 +14,7 @@ export default (sequelize) => {
       quantity: { type: DataTypes.INTEGER, allowNull: false },
       unitPrice: { type: DataTypes.FLOAT, allowNull: false },
       totalPrice: { type: DataTypes.FLOAT, allowNull: false },
-      orderId: { type: DataTypes.UUID, allowNull: false },
+      orderId: { type: DataTypes.STRING(6), allowNull: false },
     },
     { tableName: "order_items" }
   );

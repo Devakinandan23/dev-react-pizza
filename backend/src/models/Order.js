@@ -1,12 +1,21 @@
 import { DataTypes } from "sequelize";
 
+const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+function generateShortId(length = 6) {
+  let id = "";
+  for (let i = 0; i < length; i++) {
+    id += CHARS[Math.floor(Math.random() * CHARS.length)];
+  }
+  return id;
+}
+
 export default (sequelize) => {
-  return sequelize.define(
+  const Order = sequelize.define(
     "Order",
     {
       id: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
+        type: DataTypes.STRING(6),
         primaryKey: true,
       },
       customer: { type: DataTypes.STRING, allowNull: false },
@@ -21,4 +30,10 @@ export default (sequelize) => {
     },
     { tableName: "orders" }
   );
+
+  Order.beforeCreate((order) => {
+    order.id = generateShortId();
+  });
+
+  return Order;
 };
