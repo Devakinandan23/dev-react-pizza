@@ -1,5 +1,4 @@
-import { Outlet, useNavigation } from "react-router-dom";
-import Header from "./Header";
+import { useNavigation } from "react-router-dom";
 import Loader from "./Loader";
 import CartOverview from "../features/cart/CartOverview";
 import OrderHistory from "./OrderHistory";
