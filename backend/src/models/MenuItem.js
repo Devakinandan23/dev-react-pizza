@@ -16,5 +16,6 @@ export default (sequelize) => {
       soldOut: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: false },
     },
     { tableName: "menu_items" }
+    
   );
 };
